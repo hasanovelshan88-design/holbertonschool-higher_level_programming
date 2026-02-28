@@ -7,7 +7,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle
-        
+
         Args:
             width (int): width of the rectangle
             height (int): height of the rectangle
@@ -23,10 +23,10 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """Set the width of the rectangle
-        
+
         Args:
             value (int): width value
-            
+
         Raises:
             TypeError: if width is not an integer
             ValueError: if width is less than 0
@@ -45,10 +45,10 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """Set the height of the rectangle
-        
+
         Args:
             value (int): height value
-            
+
         Raises:
             TypeError: if height is not an integer
             ValueError: if height is less than 0
