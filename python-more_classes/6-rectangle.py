@@ -4,11 +4,11 @@
 
 class Rectangle:
     """Rectangle class with width and height
-    
+
     Attributes:
         number_of_instances (int): number of Rectangle instances
     """
-    
+
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -86,7 +86,7 @@ class Rectangle:
         return "\n".join(rectangle)
 
     def __repr__(self):
-        """Return a string representation of the rectangle for eval()"""
+        """Return a string representation for eval()"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
