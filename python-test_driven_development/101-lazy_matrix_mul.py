@@ -17,4 +17,4 @@ def lazy_matrix_mul(m_a, m_b):
         raise TypeError("Scalar operands are not allowed, use '*' instead")
     if not isinstance(m_b, list):
         raise TypeError("Scalar operands are not allowed, use '*' instead")
-    return np.matmul(m_a, m_b)
+    return np.dot(m_a, m_b)
