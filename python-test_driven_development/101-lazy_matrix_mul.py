@@ -31,18 +31,10 @@ def lazy_matrix_mul(m_a, m_b):
             isinstance(m_a[0], list)):
         row_len = len(m_a[0])
         if not all(len(row) == row_len for row in m_a):
-            raise ValueError(
-                "setting an array element with a sequence. "
-                "The requested array has an inhomogeneous shape "
-                "after 1 dimensions. The detected shape was (2,) "
-                "+ inhomogeneous part.")
+            raise ValueError("setting an array element with a sequence.")
     if (isinstance(m_b, list) and len(m_b) > 0 and
             isinstance(m_b[0], list)):
         row_len = len(m_b[0])
         if not all(len(row) == row_len for row in m_b):
-            raise ValueError(
-                "setting an array element with a sequence. "
-                "The requested array has an inhomogeneous shape "
-                "after 1 dimensions. The detected shape was (2,) "
-                "+ inhomogeneous part.")
+            raise ValueError("setting an array element with a sequence.")
     return np.dot(m_a, m_b)
