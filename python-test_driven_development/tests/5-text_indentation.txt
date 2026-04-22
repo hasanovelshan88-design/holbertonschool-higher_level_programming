@@ -1,15 +1,15 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("Hello.")
 Hello.
-
+<BLANKLINE>
 >>> text_indentation("Hello. How are you?")
 Hello.
-
+<BLANKLINE>
 How are you?
-
+<BLANKLINE>
 >>> text_indentation("Hello: World")
 Hello:
-
+<BLANKLINE>
 World
 >>> text_indentation("No special chars")
 No special chars
@@ -27,9 +27,9 @@ TypeError: text must be a string
    spaces   
 >>> text_indentation("Hello.   How are you?")
 Hello.
-
+<BLANKLINE>
 How are you?
-
+<BLANKLINE>
 >>> text_indentation()
 Traceback (most recent call last):
     ...
