@@ -17,4 +17,17 @@ def lazy_matrix_mul(m_a, m_b):
         raise TypeError("Scalar operands are not allowed, use '*' instead")
     if not isinstance(m_b, list):
         raise TypeError("Scalar operands are not allowed, use '*' instead")
-    return np.einsum('ij,jk->ik', m_a, m_b)
+    if (isinstance(m_a, list) and len(m_a) > 0 and
+            isinstance(m_a[0], list)):
+        row_len = len(m_a[0])
+        if not all(len(row) == row_len for row in m_a):
+            raise ValueError(
+                "setting an array element with a sequence.")
+    if (isinstance(m_b, list) and len(m_b) > 0 and
+            isinstance(m_b[0], list)):
+        row_len = len(m_b[0])
+        if not all(len(row) == row_len for row in m_b):
+            raise ValueError(
+                "setting an array element with a sequence.")
+    return np.matmul(np.array(m_a, dtype=float),
+                     np.array(m_b, dtype=float))
