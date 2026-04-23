@@ -15,6 +15,6 @@ if __name__ == "__main__":
     for state in states:
         print("{}: {}".format(state.id, state.name))
         for city in sorted(state.cities, key=lambda c: c.id):
-            print("\t{}: {}".format(city.id, city.name))
+            print("    {}: {}".format(city.id, city.name))
 
     session.close()
