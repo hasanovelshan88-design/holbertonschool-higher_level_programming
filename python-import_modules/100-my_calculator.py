@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Calculator program using functions from calculator_1.py"""
 import sys
 from calculator_1 import add, sub, mul, div
