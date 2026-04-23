@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 word1 = "object-oriented programming with Python"
 word2 = "Python"
-print(word1[:33] + word2)
+word3 = "programming"
+print(word1[:26] + word2)
