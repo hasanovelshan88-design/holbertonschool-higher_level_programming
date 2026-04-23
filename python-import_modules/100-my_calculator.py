@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Calculator program using functions from calculator_1.py"""
 import sys
-from calculator_1 import add, sub, mul, div
+import calculator_1
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
@@ -12,7 +12,12 @@ if __name__ == "__main__":
     operator = sys.argv[2]
     b = int(sys.argv[3])
 
-    operators = {'+': add, '-': sub, '*': mul, '/': div}
+    operators = {
+        '+': calculator_1.add,
+        '-': calculator_1.sub,
+        '*': calculator_1.mul,
+        '/': calculator_1.div
+    }
 
     if operator not in operators:
         print("Unknown operator. Available operators: +, -, * and /")
